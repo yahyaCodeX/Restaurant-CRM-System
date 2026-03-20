@@ -30,6 +30,9 @@ const analyticsRoutes = require('./routes/analytics');
 
 const app = express();
 
+// ─── Trust Proxy (for ngrok and load balancers) ──────────
+app.set('trust proxy', 1);
+
 // ─── Security Middleware ────────────────────────────────
 app.use(helmet());
 app.use(cors({

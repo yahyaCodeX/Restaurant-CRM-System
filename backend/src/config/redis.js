@@ -10,25 +10,29 @@ const connectRedis = async () => {
       socket: {
         host: config.redis.host,
         port: config.redis.port,
+        connectTimeout: 1000,
+        reconnectStrategy: () => false,
       },
       password: config.redis.password || undefined,
     });
 
+    let warnedUnavailable = false;
+
     redisClient.on('error', (err) => {
-      logger.error('Redis Client Error:', err.message);
+      if (!warnedUnavailable) {
+        logger.warn(`Redis unavailable; continuing without cache: ${err.message}`);
+        warnedUnavailable = true;
+      }
     });
 
     redisClient.on('connect', () => {
       logger.info('Redis connected successfully');
     });
 
-    redisClient.on('reconnecting', () => {
-      logger.warn('Redis reconnecting...');
-    });
-
     // Do not block server startup on Redis connectivity.
     redisClient.connect().catch((error) => {
       logger.warn('Redis connection failed. Running without cache:', error.message);
+      redisClient = null;
     });
 
     return redisClient;

@@ -10,6 +10,10 @@ const apiLimiter = rateLimit({
   },
   standardHeaders: true,
   legacyHeaders: false,
+  skip: (req) => {
+    // Skip rate limiting for webhooks (they have their own validation)
+    return req.path.includes('/webhook');
+  },
 });
 
 // Strict limiter for auth routes

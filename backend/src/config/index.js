@@ -45,9 +45,11 @@ const config = {
   },
 
   whatsapp: {
-    verifyToken: process.env.WHATSAPP_VERIFY_TOKEN,
-    accessToken: process.env.WHATSAPP_ACCESS_TOKEN,
-    phoneNumberId: process.env.WHATSAPP_PHONE_NUMBER_ID,
+    accountSid: process.env.TWILIO_ACCOUNT_SID,
+    authToken: process.env.TWILIO_AUTH_TOKEN,
+    whatsappNumber: process.env.TWILIO_WHATSAPP_NUMBER,
+    webhookUrl: process.env.TWILIO_WEBHOOK_URL,
+    provider: 'twilio', // 'twilio' or 'meta'
   },
 
   ai: {
