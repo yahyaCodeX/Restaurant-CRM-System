@@ -1,60 +1,64 @@
-# Restaurant CRM Platform
+# 🍽️ Restaurant CRM Platform
 
-A full-stack, multi-tenant Restaurant CRM and Ordering platform with role-based admin and restaurant panels, menu and customer management, order lifecycle tracking, notifications, analytics, and WhatsApp AI ordering support.
+A full-stack, multi-tenant Restaurant CRM and Ordering platform with role-based admin and restaurant panels, menu and customer management, order lifecycle tracking, notifications, analytics, and **WhatsApp AI ordering support**. 🚀
 
-## What This Project Includes
+---
 
-- Multi-tenant architecture (each restaurant owner works in an isolated workspace)
-- Role-based authentication and authorization
-  - Admin role
-  - Restaurant owner role
-- Restaurant onboarding with approval flow
-- Restaurant profile management
-  - Logo upload
-  - Cover image upload
-- Menu management
+## ✨ Features
+
+- **🏢 Multi-tenant architecture:** Each restaurant owner works in an isolated workspace.
+- **🔐 Role-based authentication & authorization:**
+  - 👑 Admin role
+  - 👨‍🍳 Restaurant owner role
+- **🚀 Restaurant onboarding:** Seamless approval flow.
+- **🏪 Restaurant profile management:** Manage details, upload 🖼️ logos and cover images.
+- **🍔 Menu management:**
   - CRUD operations
   - Image upload
-  - Availability toggle
-- Customer CRM
+  - Availability toggle (in-stock/out-of-stock)
+- **👥 Customer CRM:**
   - Customer CRUD
-  - Order history
+  - Order history tracking
   - Automatic customer linking during order creation
-- Table management for dine-in workflows
-- Orders board with status transitions
-- Manual order booking from dashboard
-  - Select existing customer or create a new customer
-  - Add multiple order items
-  - Dine-in, takeaway, delivery
-  - Payment method, notes, discount, table assignment
-- Notifications center (mark one/all as read)
-- Sales and operational analytics
-- WhatsApp webhook integration for AI-assisted ordering
-- Swagger API documentation
+- **🪑 Table management:** Optimize your dine-in workflows.
+- **📋 Orders board:** Visual order lifecycle tracking with status transitions.
+- **📝 Manual order booking:**
+  - Direct booking from dashboard
+  - Add multiple menu items
+  - Support for 🍽️ Dine-in, 🥡 Takeaway, and 🚚 Delivery
+- **🔔 Notifications center:** Stay updated (mark one/all as read).
+- **📊 Analytics:** Operational insights and sales tracking.
+- **💬 WhatsApp webhook integration:** AI-assisted ordering via Twilio sandbox.
+- **🛠️ Local WhatsApp Simulator:** Test AI ordering offline with a built-in React UI!
+- **📖 Swagger API documentation:** Quick and easy developer reference.
 
-## Tech Stack
+---
 
-### Frontend
-- React 18
-- Vite 5
-- React Router
-- Axios
-- date-fns
-- Recharts
-- react-hot-toast
+## 🛠️ Tech Stack
 
-### Backend
-- Node.js
-- Express
-- MongoDB + Mongoose
-- Joi validation
-- JWT authentication
-- Passport (Google OAuth)
-- Cloudinary + Multer
-- Redis client (optional cache connection)
-- Swagger (OpenAPI)
+### 💻 Frontend
+- ⚛️ **React 18**
+- ⚡ **Vite 5**
+- 🛣️ **React Router**
+- 🌐 **Axios**
+- 📅 **date-fns**
+- 📈 **Recharts**
+- 🍞 **react-hot-toast**
 
-## Repository Structure
+### ⚙️ Backend
+- 🟢 **Node.js**
+- 🚂 **Express**
+- 🍃 **MongoDB + Mongoose**
+- ✅ **Joi validation**
+- 🔑 **JWT authentication**
+- 🛂 **Passport (Google OAuth)**
+- ☁️ **Cloudinary + Multer**
+- 🗄️ **Redis client** (Optimized with fail-fast for offline development)
+- 📄 **Swagger (OpenAPI)**
+
+---
+
+## 📂 Repository Structure
 
 ~~~text
 Restaurant CRM/
